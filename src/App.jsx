@@ -197,13 +197,13 @@ function App() {
         <div>Time: <b>{formatTime(elapsed)}</b></div>
         <div>Money lost: <b style={{fontSize:'2em'}}>{formatMoney(totalLost)}</b></div>
       </div>
-      <div style={{marginBottom:16, padding:12, border:'1px solid #eee', borderRadius:8, background:'#fafbfc'}}>
-        <div style={{fontWeight:'bold', fontSize:'1.1em', marginBottom:4}}>Current speaker:</div>
+      <div style={{marginBottom:16, padding:12, border:'1px solid #eee', borderRadius:8, background:'#e3edfa'}}>
+        <div style={{fontWeight:'bold', fontSize:'1.1em', marginBottom:4, color:'#2563eb'}}>Current speaker:</div>
         {currentSpeaker ? (
           <>
-            <div style={{fontSize:'1.2em'}}>{currentSpeaker.name}</div>
-            <div>Assigned: {formatTime(currentState.tiempoAsignado || 0)} | Spoken: {formatTime(currentState.tiempoHablado || 0)}</div>
-            <div>Lost: <b>{formatMoney(currentState.dineroPerdido || 0)}</b></div>
+            <div style={{fontSize:'1.7em', fontWeight:'bold', color:'#213547', letterSpacing:0.5}}>{currentSpeaker.name}</div>
+            <div style={{fontSize:'1.1em',  color:'#213547', letterSpacing:0.5}}>Assigned: {formatTime(currentState.tiempoAsignado || 0)} | Spoken: {formatTime(currentState.tiempoHablado || 0)}</div>
+            <div style={{fontSize:'1.1em',  color:'#213547', letterSpacing:0.5}}>Lost: <b>{formatMoney(currentState.dineroPerdido || 0)}</b></div>
             <div style={{margin:'8px 0'}}>
               <button onClick={handleNext} disabled={!running} style={{marginRight:8}}>Next</button>
               <button onClick={handleToggleOffTrack} disabled={!running} style={{background:currentState.offTrack?'#e67e22':'#eee', color:currentState.offTrack?'#fff':'#333'}}>
