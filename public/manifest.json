@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Meeting Money Tracker",
+  "version": "1.0",
+  "description": "Track wasted money in meetings in real time.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Meeting Money Tracker"
+  },
+  "icons": {
+    "16": "vite.svg",
+    "32": "vite.svg",
+    "128": "vite.svg"
+  }
+} 
